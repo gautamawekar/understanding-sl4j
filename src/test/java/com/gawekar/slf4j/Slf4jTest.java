@@ -9,7 +9,10 @@ public class Slf4jTest {
 
 	@Test
 	public void slf4j() {
-		// System.out.println("Hello world");
-		LOG.info("Hello world");
+		LOG.info("\n\n>>>>>>>>>>>>>>>LOG ENABLED>>>>>>>>>>>>>>>");
+		LOG.info(">>>>>>>>>>>>>>>LOG Hello world 1>>>>>>>>>>>>>>>");
+		LOG.info(">>>>>>>>>>>>>>>LOG Hello world 2>>>>>>>>>>>>>>>");
+		LOG.info(">>>>>>>>>>>>>>>LOG Hello world 3>>>>>>>>>>>>>>>");
+		LOG.info(">>>>>>>>>>>>>>>LOG Hello world 4>>>>>>>>>>>>>>>\n\n");
 	}
 }
