@@ -29,13 +29,12 @@
 			<id>log4j</id>
 			<dependencies>
 				<!-- SLF4J against log4j -->
-				<!-- Binding for log4j version 1.2, a widely used logging framework. 
-					You also need to place log4j.jar on your class path. -->
 				<dependency>
 					<groupId>org.slf4j</groupId>
 					<artifactId>slf4j-log4j12</artifactId>
 					<version>1.7.5</version>
 				</dependency>
+				<!-- Need to include log4j dependency-->
 				<dependency>
 					<groupId>log4j</groupId>
 					<artifactId>log4j</artifactId>
