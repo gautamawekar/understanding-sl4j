@@ -1,0 +1,8 @@
+target/
+#code is generated so ignore src/main/java
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+

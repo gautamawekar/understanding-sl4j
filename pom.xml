@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>understanding-sl4j</groupId>
+	<artifactId>understanding-sl4j</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.11</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+	</dependencies>
+	<profiles>
+		<profile>
+			<id>log4j</id>
+			<dependencies>
+				<!-- SLF4J against log4j -->
+				<!-- Binding for log4j version 1.2, a widely used logging framework. 
+					You also need to place log4j.jar on your class path. -->
+				<dependency>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+					<version>1.7.5</version>
+				</dependency>
+				<dependency>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
+					<version>1.2.14</version>
+				</dependency>
+			</dependencies>
+		</profile>
+		<profile>
+			<id>jdklog</id>
+			<activation>
+			</activation>
+			<dependencies>
+				<!-- slf4j against jdk logging -->
+				<dependency>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-jdk14</artifactId>
+					<version>1.7.12</version>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
+</project>
